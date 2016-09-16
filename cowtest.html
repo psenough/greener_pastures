@@ -112,30 +112,10 @@ var input_char = (function () {
   };
 }());
 
-function c(cowIn) {
+function c(b) {
 
-	function print(text) {
-		//result = result + text
-		for (var i=0; i< text.length; i++) output_char(text[i]);
-	}
-
-	function newline(text) {
-		//result = result + "\n"
-		output_char('\n');
-	}
-
-	function printChar(code)  {
-		//print(String.fromCharCode(code))
-		output_char(String.fromCharCode(code));
-	}
-
-	function printNumber(number) {
-		print(number)
-		newline()
-	}
-
-	function exec(instruction) {
-		switch (instruction) {
+	function x(y) {
+		switch (y) {
 			// moo
 			case 0:
 				if (progPos == 0) {
@@ -157,59 +137,59 @@ function c(cowIn) {
 					if (level != 0) {
 						return false
 					}
-					return exec(cowProgram[progPos])
+					return x(cowProgram[progPos])
 				}
 				break
 		
 			// mOo
 			case 1:
-				if (memPos == 0) {
+				if (e == 0) {
 					return false
 				} else {
-					memPos--
+					e--
 				}
 				break
 
 			// moO
 			case 2:
-				memPos++
-				if (memPos == memory.length) {
-					memory.push(0)
+				e++
+				if (e == m.length) {
+					m.push(0)
 				}
 				break
 		
 			// mOO    
 			case 3:
-				if (memory[memPos] == 3) {
+				if (m[e] == 3) {
 					return false
 				} else {
-					return exec(memory[memPos])
+					return x(m[e])
 				}
 				break
 		
 			// Moo
 			case 4:
-				if (memory[memPos] != 0) {
-					printChar(memory[memPos])
+				if (m[e] != 0) {
+					output_char(String.fromCharCode(code));
 				} else {
-					//memory[memPos] = Text.charCodeAt(window.prompt("please enter a character"))
-					memory[memPos] = input_char();
+					//m[e] = Text.charCodeAt(window.prompt("please enter a character"))
+					m[e] = input_char();
 				}
 				break
 			
 			// MOo
 			case 5:
-				memory[memPos]--
+				m[e]--
 				break
 			
 			// MoO
 			case 6:
-				memory[memPos]++
+				m[e]++
 				break
 			
 			// MOO
 			case 7:
-				if (memory[memPos] == 0) {
+				if (m[e] == 0) {
 					var level = 1
 					var prev = 0
 					progPos++  // have to skip past next command when looking for next moo.
@@ -241,29 +221,28 @@ function c(cowIn) {
 			
 			// OOO
 			case 8:
-				memory[memPos] = 0
+				m[e] = 0
 				break
 			
 			// MMM
 			case 9:
 				if (registerVal == undefined) {
-					registerVal = memory[memPos]
+					registerVal = m[e]
 				} else {
-					memory[memPos] = registerVal
+					m[e] = registerVal
 					registerVal = undefined
 				}
 				break
 			
 			// OOM
 			case 10:
-				//printNumber(memory[memPos])
-				print(memory[memPos]+'');
+				for (i=0,d=m[e]+''; i< d.length; i++) output_char(d[i]);
 				break
 			
 			// oom
 			case 11:
-				//memory[memPos] = parseFloat(window.prompt("please enter a number"))
-				memory[memPos] = parseFloat(input_char());
+				//m[e] = parseFloat(window.prompt("please enter a number"))
+				m[e] = parseFloat(input_char());
 				break
 			
 			// bad stuff
@@ -276,16 +255,15 @@ function c(cowIn) {
 
 	// read program
 	result = ""
-	var tokens = [ "moo", "mOo", "moO", "mOO", "Moo", "MOo",
-		"MoO", "MOO", "OOO", "MMM", "OOM", "oom"]
-	//cowIn = document.getElementById("CowProgram")
+	var tokens = ["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"]
+	//b = document.getElementById("CowProgram")
 	var token = "   "
-	cowProgram = new Array()
-	for (var i = 0; i < cowIn.length; i++) {
-		token = token.substring(1) + cowIn.charAt(i)
+	a = new Array()
+	for (var i = 0; i < b.length; i++) {
+		token = token.substring(1) + b.charAt(i)
 		for (var j = 0; j < tokens.length; j++) {
 			if (tokens[j] == token) {
-				cowProgram.push(j)
+				a.push(j)
 				token = "   "
 				break
 			}
@@ -295,14 +273,14 @@ function c(cowIn) {
 	// execute
 	progPos = 0
 	registerVal = undefined
-	memory = new Array()
-	memPos = 0
-	memory.push(0)
+	m = new Array()
+	e = 0
+	m.push(0)
 	var counter = 0;
 	while (progPos != cowProgram.length) {
 		counter++;
 		if (counter > 3000) break;
-		if (!exec(cowProgram[progPos])) {
+		if (!exec(a[progPos])) {
 			break
 		}
 	}
