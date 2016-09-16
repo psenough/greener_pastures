@@ -1,0 +1,283 @@
+<html>
+<script>
+
+//var STDOUT = '';
+
+function runme() {
+
+	console.log('testing 1 - Hello World!');
+	document.getElementById('output').innerHTML = '';
+	c('MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO Moo Moo MoO MoO MoO Moo OOO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo Moo MOo MOo MOo MOo MOo MOo MOo MOo Moo MoO MoO MoO Moo MOo MOo MOo MOo MOo MOo Moo MOo [[with comments]] MOo MOo MOo MOo MOo MOo MOo Moo OOO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo');
+
+	console.log('testing 2 - Fibonaci 1,1,2,3,5,8,1,3,2,1,...');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO moO MoO mOo MOO OOM MMM moO moO MMM mOo mOo moO MMM mOo MMM moO moO MOO MOo mOo MoO moO moo mOo mOo moo');
+
+	console.log('testing 3 - try to execute unknown command, should exit cleanly');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MOo mOO');
+
+	console.log('testing 4 - Loop 3 times');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MOO MOo moo');
+
+	console.log('testing 5 - test if current memPos value is 3 without affecting current');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MMM moO MMM moO OOO MoO MoO MoO MOO MOo mOo MOo moO moo mOo MOO mOo OOM moO OOO MOO moo mOo OOM moO OOO MOO moo moo mOo');
+
+	console.log('testing 6 - load value and print it out as char and integer using both load methods');
+	document.getElementById('output').innerHTML += '<br>';
+	c('Moo OOM Moo MoO oom OOM Moo');
+
+	console.log('testing 7 - test moo without MOO, clean exit');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO moo');
+
+	console.log('testing 8 - test MOO without moo, clean exit');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MOO MoO MoO');
+
+	console.log('testing 9 - Print 1,2,3,4,5 read from standard input (as chars)');
+	document.getElementById('output').innerHTML += '<br>';
+	c('Moo Moo moO Moo Moo moO Moo Moo moO Moo Moo moO Moo Moo');
+
+	console.log('testing 10 - Print 1,2,3,4,5 read from standard input (as integers)');
+	document.getElementById('output').innerHTML += '<br>';
+	c('oom OOM moO oom OOM moO oom OOM moO oom OOM moO oom OOM');
+
+	console.log('testing 11 - Replace \"mOO\" with instruction in memory, print 2,0');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO mOO mOo OOM moO OOM');
+
+	console.log('testing 12 - Loop test with register: should print 3,3,3,0');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MMM moO MMM MOO MOo mOo OOM moO moo OOM');
+
+	console.log('testing 13 - Loop test with register: should print 3,3,3,0');
+	document.getElementById('output').innerHTML += '<br>';
+	c('moOMoOMoOMoOMoOmoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMommMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMMoOMMMmOomOomOomOomOomOoMMMMoOmoOmoOmoOmoOmoOmoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOmOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMOOOOMmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOMooMoomOomOomOomOomOomOoMoomOomOomOomOomOoMoomOomOomOomOomOomOomOomOoMMMMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmooMMMmoOmoOmoOmoOmoOmoOmoOmoOmOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomoOmoOmoOmoOMoomoOmoOMooMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOoMoomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOoMoomOomOoMoomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOMooMoomOomOomOomOomOomOomOomOomOomOoMoomOomOoMoomOoOOMmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOMooMoomOomOomOomOomOomOoMoomOomOomOomOomOoMoomOomOomOomOomOomOomOomOoMMMMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmooMMMmoOmoOmoOmoOmoOmoOmoOmoOmOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomoOmoOmoOmoOMoomoOmoOMooMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOoMoomOomOomOomOomOomOoMoomOomOoMMMmOoOOOMoOmoOMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOoMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOomOomOoOOOmoOOOOmooMMMmOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmoomoOmoOmoOMoomoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOoMoomOomOomOomOomOomOomOomOomOomOomOoMoomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMooMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOoMoomoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomOomOomOomOoMoomOomOoMoomOoMOoOOMmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOMooMoomOomOomOomOomOomOoMoomOomOomOomOomOoMoomOomOomOomOomOomOomOomOoMMMMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmooMMMmoOmoOmoOmoOmoOmoOmoOmoOmOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomoOmoOmoOmoOMoomoOmoOMooMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOoMoomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOoMoomOomOoMoomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOMooMoomOomOomOomOomOomOomOomOomOoMoomOomOomOoMooMoomOomoo');
+
+	console.log('testing 14 - infinity counter');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MOO moO OOM MoO mOo moo');
+
+	console.log('testing 15 - print Frank!');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MoO MoO MoO MoO MoO MoO MoO MoO MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo OOO MoO MoO MoO MoO MoO MoO mOo MMM moO moO MMM MOO MOo mOo MoO moO moo mOo Moo mOo MMM moO MMM mOo mOo MMM moO moO moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo mOo MMM moO MMM MoO Moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MOo MOo MOo Moo');
+
+
+	console.log('testing 16 - loop skip test');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MOO moo moo');
+
+	console.log('testing 17 - should print 3 2 1');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MOO OOM MOo moo');
+
+	console.log('testing 18 - Invalid replacement of \"mOO\" with itself, should abort (and print nothing)');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO mOO OOM');
+	
+	console.log('testing 19 - garbage program');
+	document.getElementById('output').innerHTML += '<br>';
+	c('mOos21312mafiosntewtewo');
+
+	console.log('testing 20 - print Frank$#&$#!');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MoO MoO MoO MoO MoO MoO MoO MoO MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo OOO MoO MoO MoO MoO MoO MoO mOo MMM moO moO MMM MOO MOo mOo MoO moO moo mOo Moo mOaMM moO MMM mOo mOo MMM moO moO moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo mOo MMM moO MMM MoO Moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MOo MOo MOo Moo');
+	
+	//document.getElementById('output').innerHTML += STDOUT;
+}
+
+//function input_char() {
+//return 97;
+//}
+
+//function output_char(output) {
+//document.getElementById('output').innerHTML += output[0];
+//alert(output);
+//}
+
+function output_char(ch) {
+	document.getElementById('output').innerHTML += ch[0];
+    //console.log(ch);
+	//alert(ch);
+}
+
+var input_char = (function () {
+  var i = 0;
+  var text = 'aa12345';
+  return function input_char() {
+    return text[i++ % text.length].charCodeAt(0);
+  };
+}());
+
+function c(p){
+function x(n){
+//console.log(m);
+//console.log(n + ' progPos:' + progPos + ' memPos:' + memPos  + ' register:' + r);
+switch (t.indexOf(n)){
+	case 0: // moo This command is connected to the MOO command. When encountered during normal execution, it searches the program code in reverse looking for a matching MOO command and begins executing again starting from the found MOO command. When searching, it skips the instruction that is immediately before it (see MOO).
+		if (progPos == 0) {
+			return false
+		} else {
+			/*progPos--
+			l = 1
+			while (l > 0) {
+				if (progPos == 0) {
+					break
+				}
+				progPos--
+				if (a[progPos] == t[0]) {
+					l++
+				} else if (a[progPos] == t[7]) {
+					l--
+				}
+			}
+			if (l != 0) return false
+			return x(a[progPos])*/
+			for(progPos--,l=1;l>0;){
+				if (progPos-- == 0) return false
+				if (a[progPos] == t[0]) {
+					l++
+				} else if (a[progPos] == t[7]) {
+					l--
+				}
+			}
+			return x(a[progPos])
+		}
+		break
+
+	case 1: // mOo moves current memory position back one block.
+		if (memPos == 0) {
+			return false
+		} else {
+			memPos--
+		}
+		break
+
+	case 2: // moO	Moves current memory position forward one block.
+		memPos++
+		if (memPos == m.length) m.push(0)
+		break
+
+	case 3: // mOO	Execute value in current memory block as if it were an instruction. The command executed is based on the instruction code value (for example, if the current memory block contains a 2, then the moO command is executed). An invalid command exits the running program. Value 3 is invalid as it would cause an infinite loop.
+		if (m[memPos] == 3) {
+			return false
+		} else {
+			return x(t[m[memPos]])
+		}
+		break
+
+	case 4: // Moo	If current memory block has a 0 in it, read a single ASCII character from STDIN and store it in the current memory block. If the current memory block is not 0, then print the ASCII character that corresponds to the value in the current memory block to STDOUT.
+		if (m[memPos] != 0) {
+			output_char(s(m[memPos]));
+			//STDOUT+=String.fromCharCode(m[memPos])
+		} else {
+			m[memPos] = input_char();
+		}
+		break
+	case 5: // MOo	Decrement current memory block value by 1.
+		m[memPos]--
+		break
+	
+	case 6: // MoO	Increment current memory block value by 1.
+		m[memPos]++
+		break
+	
+	case 7: // MOO	If current memory block value is 0, skip next command and resume execution after the next matching moo command. If current memory block value is not 0, then continue with next command. Note that the fact that it skips the command immediately following it has interesting ramifications for where the matching moo command really is. For example, the following will match the second and not the first moo: OOO MOO moo moo
+		if (m[memPos] == 0) {
+			/*l = 1
+			prev = 0
+			progPos++
+			if (progPos == g) {
+				break
+			}
+			while (l > 0) {
+				prev = a[progPos]
+				progPos++
+				if (progPos == g) {
+					break
+				}
+				if (a[progPos] == t[7]) {
+					l++
+				} else {
+					if (a[progPos] == t[0]) {
+						l--
+						if (prev == t[7]) {
+							l--
+						}
+					}
+				}
+			}
+			if (l != 0) {
+				return false
+			}*/
+			
+			for(l=1,prev=0,progPos++;l>0;){
+				prev = a[progPos] // removed pre cycle check for progPos out of bounds, could this give javascript error instead of undefined?
+				progPos++
+				if (progPos == g) {
+					return false
+				}
+				if (a[progPos] == t[7]) {
+					l++
+				} else {
+					if (a[progPos] == t[0]) {
+						l--
+						if (prev == t[7]) {
+							l--
+						}
+					}
+				}
+			}
+		}
+		break
+	
+	case 8: // OOO	Set current memory block value to 0.
+		m[memPos] = 0
+		break
+	
+	case 9: // MMM	If no current value in register, copy current memory block value. If there is a value in the register, then paste that value into the current memory block and clear the register.
+		if (r == undefined) {
+			r = m[memPos]
+		} else {
+			m[memPos] = r
+			r = undefined
+		}
+		break
+	
+	case 10: // OOM	Print value of current memory block to STDOUT as an integer.
+		var st = m[memPos]+'';
+		for (var i=0;i<st.length; i++) output_char(st[i]);
+		//STDOUT+=m[memPos]
+		break
+
+	case 11: // oom	Read an integer from STDIN and put it into the current memory block.
+		//m[memPos]=parseInt(s(input_char()))
+		var value = parseInt(s(input_char()),10)
+		if (!isNaN(value)) m[memPos]=value
+		break
+	
+	default: // All other character combinations are ignored and treated as comments.
+		//console.log('exiting with ' + n)
+		return false
+}
+progPos++
+return true
+}
+//a=p.split(' ')
+a=p.replace(/ *\[\[[^\]]*\]\]*/g, "").replace(/(\r\n|\n|\r|\s)/gm,"").match(/[\s\S]{1,3}/g)||[]
+console.log(a);
+counter = 0;
+for(s=String.fromCharCode,g=a.length,t=["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"],progPos=0,r=undefined,m=new Array(),m.push(0),memPos=0;progPos<g&&x(a[progPos]);) if (counter++ > 2000) {
+console.log('breaking out of long loop');
+break;
+}
+}
+
+</script>
+<body>
+	<input type="button" onclick="runme()" value="click me"/><br>
+	<div id="output"></div>
+</body>
