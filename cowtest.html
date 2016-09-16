@@ -118,26 +118,34 @@ function c(b) {
 		switch (y) {
 			// moo
 			case 0:
-				if (progPos == 0) {
+				if (p == 0) {
 					return false
 				} else {
-					progPos--  // skip previous command.
-					level = 1
-					while (level > 0) {
-						if (progPos == 0) {
+					p--  // skip vious command.
+					l = 1
+					while (l > 0) {
+						if (p == 0) {
 							break
 						}
-						progPos--
-						if (cowProgram[progPos] == 0) {
-							level++
-						} else if (cowProgram[progPos] == 7) {  // look for MOO
-							level--
+						p--
+						if (a[p] == 0) {
+							l++
+						} else if (a[p] == 7) {  // look for MOO
+							l--
 						}
 					}
-					if (level != 0) {
+					if (l != 0) {
 						return false
 					}
-					return x(cowProgram[progPos])
+					/*for(p--,l=1;l>0;){
+						if (p-- == 0) return false
+						if (a[p] == t[0]) {
+							l++
+						} else if (a[p] == t[7]) {
+							l--
+						}
+					}*/
+					return x(a[p])
 				}
 				break
 		
@@ -169,12 +177,7 @@ function c(b) {
 		
 			// Moo
 			case 4:
-				if (m[e] != 0) {
-					output_char(String.fromCharCode(code));
-				} else {
-					//m[e] = Text.charCodeAt(window.prompt("please enter a character"))
-					m[e] = input_char();
-				}
+				(m[e]!=0)?h(String.fromCharCode(m[e])):m[e]=n()
 				break
 			
 			// MOo
@@ -190,32 +193,51 @@ function c(b) {
 			// MOO
 			case 7:
 				if (m[e] == 0) {
-					var level = 1
-					var prev = 0
-					progPos++  // have to skip past next command when looking for next moo.
-					if (progPos == cowProgram.length) {
+					l = 1
+					v = 0
+					p++  // have to skip past next command when looking for next moo.
+					if (p == g) {
 						break
 					}
-					while (level > 0) {
-						prev = cowProgram[progPos]
-						progPos++
-						if (progPos == cowProgram.length) {
+					while (l > 0) {
+						v = a[p]
+						p++
+						if (p == g) {
 							break
 						}
-						if (cowProgram[progPos] == 7) {
-							level++
+						if (a[p] == 7) {
+							l++
 						} else {
-							if (cowProgram[progPos] == 0) {  // look for moo command.
-								level--
-								if (prev == 7) {
-									level--
+							if (a[p] == 0) {  // look for moo command.
+								l--
+								if (v == 7) {
+									l--
 								}
 							}
 						}
 					}
-					if (level != 0) {
+					if (l != 0) {
 						return false
 					}
+					/*
+					for(l=1,v=0,p++;l>0;){
+						v = a[p] // removed pre cycle check for p out of bounds, could this give javascript error instead of undefined?
+						p++
+						if (p == g) {
+							//return false
+							break
+						}
+						if (a[p] == t[7]) {
+							l++
+						} else {
+							if (a[p] == t[0]) {
+								l--
+								if (v == t[7]) {
+									l--
+								}
+							}
+						}
+					}*/
 				}
 				break
 			
@@ -226,64 +248,73 @@ function c(b) {
 			
 			// MMM
 			case 9:
-				if (registerVal == undefined) {
-					registerVal = m[e]
+				if (r == undefined) {
+					r = m[e]
 				} else {
-					m[e] = registerVal
-					registerVal = undefined
+					m[e] = r
+					r = undefined
 				}
 				break
 			
 			// OOM
 			case 10:
-				for (i=0,d=m[e]+''; i< d.length; i++) output_char(d[i]);
+				for(i=0,d=m[e]+'';i<d.length;i++)h(d[i]);
 				break
 			
 			// oom
 			case 11:
 				//m[e] = parseFloat(window.prompt("please enter a number"))
-				m[e] = parseFloat(input_char());
+				m[e] = parseInt(n())
 				break
 			
 			// bad stuff
 			default:
 				return false
 		}
-		progPos++
+		p++
 		return true
 	}
 
 	// read program
-	result = ""
-	var tokens = ["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"]
+	//result = ""
+	//t=["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"]
 	//b = document.getElementById("CowProgram")
-	var token = "   "
-	a = new Array()
-	for (var i = 0; i < b.length; i++) {
-		token = token.substring(1) + b.charAt(i)
-		for (var j = 0; j < tokens.length; j++) {
-			if (tokens[j] == token) {
+	//k="   "
+	//a=new Array()
+	for (n=input_char,h=output_char,t=["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"],k="   ",a=new Array(),i=0;i<b.length;i++) {
+		k=k.substring(1)+b.charAt(i)
+		for (j=0;j<t.length;j++) {
+			if (t[j] == k) {
 				a.push(j)
-				token = "   "
+				k="   "
 				break
 			}
 		}
 	}
+	//g=a.length
 
 	// execute
-	progPos = 0
-	registerVal = undefined
+	/*p = 0
+	r = undefined
 	m = new Array()
 	e = 0
 	m.push(0)
 	var counter = 0;
-	while (progPos != cowProgram.length) {
+	while (p != a.length) {
 		counter++;
 		if (counter > 3000) break;
-		if (!exec(a[progPos])) {
+		if (!x(a[p])) {
 			break
 		}
-	}
+	}*/
+	
+	counter = 0;
+	for(g=a.length,p=0,r=undefined,m=new Array(),m.push(0),e=0;p<g&&x(a[p]);)
+		if (counter++ > 3000) {
+			console.log('breaking out of long loop');
+			break;
+		}
+
 	//newline()
 	//print("Done.")
 	//cowOut = document.getElementById("CowResult")
