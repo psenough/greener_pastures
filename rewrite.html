@@ -1,0 +1,331 @@
+<html>
+<script>
+
+//var STDOUT = '';
+
+function runme() {
+
+	console.log('testing 1 - Hello World!');
+	document.getElementById('output').innerHTML = '';
+	c('MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO Moo Moo MoO MoO MoO Moo OOO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo Moo MOo MOo MOo MOo MOo MOo MOo MOo Moo MoO MoO MoO Moo MOo MOo MOo MOo MOo MOo Moo MOo [[with comments]] MOo MOo MOo MOo MOo MOo MOo Moo OOO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo');
+
+	console.log('testing 2 - Fibonaci 1,1,2,3,5,8,1,3,2,1,...');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO moO MoO mOo MOO OOM MMM moO moO MMM mOo mOo moO MMM mOo MMM moO moO MOO MOo mOo MoO moO moo mOo mOo moo');
+
+	console.log('testing 3 - try to execute unknown command, should exit cleanly');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MOo mOO');
+
+	console.log('testing 4 - Loop 3 times');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MOO MOo moo');
+
+	console.log('testing 5 - test if current memPos value is 3 without affecting current');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MMM moO MMM moO OOO MoO MoO MoO MOO MOo mOo MOo moO moo mOo MOO mOo OOM moO OOO MOO moo mOo OOM moO OOO MOO moo moo mOo');
+
+	console.log('testing 6 - load value and print it out as char and integer using both load methods');
+	document.getElementById('output').innerHTML += '<br>';
+	c('Moo OOM Moo MoO oom OOM Moo');
+
+	console.log('testing 7 - test moo without MOO, clean exit');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO moo');
+
+	console.log('testing 8 - test MOO without moo, clean exit');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MOO MoO MoO');
+
+	console.log('testing 9 - Print 1,2,3,4,5 read from standard input (as chars)');
+	document.getElementById('output').innerHTML += '<br>';
+	c('Moo Moo moO Moo Moo moO Moo Moo moO Moo Moo moO Moo Moo');
+
+	console.log('testing 10 - Print 1,2,3,4,5 read from standard input (as integers)');
+	document.getElementById('output').innerHTML += '<br>';
+	c('oom OOM moO oom OOM moO oom OOM moO oom OOM moO oom OOM');
+
+	console.log('testing 11 - Replace \"mOO\" with instruction in memory, print 2,0');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO mOO mOo OOM moO OOM');
+
+	console.log('testing 12 - Loop test with register: should print 3,3,3,0');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MMM moO MMM MOO MOo mOo OOM moO moo OOM');
+
+	console.log('testing 13 - Loop test with register: should print 3,3,3,0');
+	document.getElementById('output').innerHTML += '<br>';
+	c('moOMoOMoOMoOMoOmoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMommMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMoOMMMmoOMMMMoOMMMmOomOomOomOomOomOoMMMMoOmoOmoOmoOmoOmoOmoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMMMmoOMMMMoOMoOmOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMOOOOMmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOMooMoomOomOomOomOomOomOoMoomOomOomOomOomOoMoomOomOomOomOomOomOomOomOoMMMMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmooMMMmoOmoOmoOmoOmoOmoOmoOmoOmOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomoOmoOmoOmoOMoomoOmoOMooMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOoMoomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOoMoomOomOoMoomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOMooMoomOomOomOomOomOomOomOomOomOomOoMoomOomOoMoomOoOOMmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOMooMoomOomOomOomOomOomOoMoomOomOomOomOomOoMoomOomOomOomOomOomOomOomOoMMMMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmooMMMmoOmoOmoOmoOmoOmoOmoOmoOmOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomoOmoOmoOmoOMoomoOmoOMooMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOoMoomOomOomOomOomOomOoMoomOomOoMMMmOoOOOMoOmoOMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOoMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOomOomOoOOOmoOOOOmooMMMmOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmoomoOmoOmoOMoomoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOoMoomOomOomOomOomOomOomOomOomOomOomOoMoomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMooMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOoMoomoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomOomOomOomOoMoomOomOoMoomOoMOoOOMmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomoOmoOmoOmoOMooMoomOomOomOomOomOomOoMoomOomOomOomOomOoMoomOomOomOomOomOomOomOomOoMMMMOoMOOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoOOOmooMMMmoOmoOmoOmoOmoOmoOmoOmoOmOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOoMoomOomOomOomOomOomOomOoMoomoOmoOmoOmoOMoomoOmoOMooMoomoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOoMoomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOoMoomOomOoMoomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOmoOMoomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOomOoMoomoOmoOmoOmoOmoOmoOmoOmoOMooMoomOomOomOomOomOomOomOomOomOoMoomOomOomOoMooMoomOomoo');
+
+	console.log('testing 14 - infinity counter');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MOO moO OOM MoO mOo moo');
+
+	console.log('testing 15 - print Frank!');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MoO MoO MoO MoO MoO MoO MoO MoO MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo OOO MoO MoO MoO MoO MoO MoO mOo MMM moO moO MMM MOO MOo mOo MoO moO moo mOo Moo mOo MMM moO MMM mOo mOo MMM moO moO moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo mOo MMM moO MMM MoO Moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MOo MOo MOo Moo');
+
+
+	console.log('testing 16 - loop skip test');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MOO moo moo');
+
+	console.log('testing 17 - should print 3 2 1');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO MOO OOM MOo moo');
+
+	console.log('testing 18 - Invalid replacement of \"mOO\" with itself, should abort (and print nothing)');
+	document.getElementById('output').innerHTML += '<br>';
+	c('MoO MoO MoO mOO OOM');
+	
+	console.log('testing 19 - garbage program');
+	document.getElementById('output').innerHTML += '<br>';
+	c('mOos21312mafiosntewtewo');
+
+	console.log('testing 20 - print Frank$#&$#!');
+	document.getElementById('output').innerHTML += '<br>';
+	c('OOO MoO MoO MoO MoO MoO MoO MoO MoO MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MMM moO MMM MOO MOo mOo MoO moO moo OOO MoO MoO MoO MoO MoO MoO mOo MMM moO moO MMM MOO MOo mOo MoO moO moo mOo Moo mOaMM moO MMM mOo mOo MMM moO moO moO MMM MOO MOo mOo MoO moO moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo mOo MMM moO MMM MoO Moo mOo MMM moO MMM MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO Moo MOo MOo MOo Moo');
+	
+	//document.getElementById('output').innerHTML += STDOUT;
+}
+
+//function input_char() {
+//return 97;
+//}
+
+//function output_char(output) {
+//document.getElementById('output').innerHTML += output[0];
+//alert(output);
+//}
+
+function output_char(ch) {
+	document.getElementById('output').innerHTML += ch[0];
+    //console.log(ch);
+	//alert(ch);
+}
+
+var input_char = (function () {
+  var i = 0;
+  var text = 'aa12345';
+  return function input_char() {
+    return text[i++ % text.length].charCodeAt(0);
+  };
+}());
+
+function c(b) {
+
+	function x(y) {
+		switch (y) {
+			// moo
+			case 0:
+				if (p == 0) {
+					return false
+				} else {
+					p--  // skip vious command.
+					l = 1
+					while (l > 0) {
+						if (p == 0) {
+							break
+						}
+						p--
+						if (a[p] == 0) {
+							l++
+						} else if (a[p] == 7) {  // look for MOO
+							l--
+						}
+					}
+					if (l != 0) {
+						return false
+					}
+					/*for(p--,l=1;l>0;){
+						if (p-- == 0) return false
+						if (a[p] == t[0]) {
+							l++
+						} else if (a[p] == t[7]) {
+							l--
+						}
+					}*/
+					return x(a[p])
+				}
+				break
+		
+			// mOo
+			case 1:
+				if (e == 0) {
+					return false
+				} else {
+					e--
+				}
+				break
+
+			// moO
+			case 2:
+				e++
+				if (e == m.length) {
+					m.push(0)
+				}
+				break
+		
+			// mOO    
+			case 3:
+				if (m[e] == 3) {
+					return false
+				} else {
+					return x(m[e])
+				}
+				break
+		
+			// Moo
+			case 4:
+				(m[e]!=0)?h(String.fromCharCode(m[e])):m[e]=n()
+				break
+			
+			// MOo
+			case 5:
+				m[e]--
+				break
+			
+			// MoO
+			case 6:
+				m[e]++
+				break
+			
+			// MOO
+			case 7:
+				if (m[e] == 0) {
+					l = 1
+					v = 0
+					p++  // have to skip past next command when looking for next moo.
+					if (p == g) {
+						break
+					}
+					while (l > 0) {
+						v = a[p]
+						p++
+						if (p == g) {
+							break
+						}
+						if (a[p] == 7) {
+							l++
+						} else {
+							if (a[p] == 0) {  // look for moo command.
+								l--
+								if (v == 7) {
+									l--
+								}
+							}
+						}
+					}
+					if (l != 0) {
+						return false
+					}
+					/*
+					for(l=1,v=0,p++;l>0;){
+						v = a[p] // removed pre cycle check for p out of bounds, could this give javascript error instead of undefined?
+						p++
+						if (p == g) {
+							//return false
+							break
+						}
+						if (a[p] == t[7]) {
+							l++
+						} else {
+							if (a[p] == t[0]) {
+								l--
+								if (v == t[7]) {
+									l--
+								}
+							}
+						}
+					}*/
+				}
+				break
+			
+			// OOO
+			case 8:
+				m[e] = 0
+				break
+			
+			// MMM
+			case 9:
+				if (r == undefined) {
+					r = m[e]
+				} else {
+					m[e] = r
+					r = undefined
+				}
+				break
+			
+			// OOM
+			case 10:
+				for(i=0,d=m[e]+'';i<d.length;i++)h(d[i]);
+				break
+			
+			// oom
+			case 11:
+				//m[e] = parseFloat(window.prompt("please enter a number"))
+				m[e] = ~~n()
+				break
+			
+			// bad stuff
+			//default:
+			//	return false
+		}
+		//p++
+		return true
+	}
+
+	// read program
+	//result = ""
+	//t=["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"]
+	//b = document.getElementById("CowProgram")
+	//k="   "
+	//a=new Array()
+	n=input_char,h=output_char,t=["moo","mOo","moO","mOO","Moo","MOo","MoO","MOO","OOO","MMM","OOM","oom"],k="   ",a=new Array()
+	for (i=0;i<b.length;i++) {
+		k=k.substring(1)+b.charAt(i)
+		for (j=0;j<t.length;j++) {
+			if (t[j] == k) {
+				a.push(j)
+				k="   "
+				break
+			}
+		}
+	}
+	//a = b.split(' ');
+	//g=a.length
+
+	// execute
+	/*p = 0
+	r = undefined
+	m = new Array()
+	e = 0
+	m.push(0)
+	var counter = 0;
+	while (p != a.length) {
+		counter++;
+		if (counter > 3000) break;
+		if (!x(a[p])) {
+			break
+		}
+	}*/
+	
+	counter = 0;
+	for(g=a.length,p=0,r=undefined,m=new Array(),m.push(0),e=0;p<g&&x(a[p]);p++)
+	//;
+		if (counter++ > 3000) {
+			console.log('breaking out of long loop');
+			break;
+		}
+
+	//newline()
+	//print("Done.")
+	//cowOut = document.getElementById("CowResult")
+	//cowOut.value = result
+}
+
+</script>
+<body>
+	<input type="button" onclick="runme()" value="click me"/><br>
+	<div id="output"></div>
+</body>
