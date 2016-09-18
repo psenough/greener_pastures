@@ -1,16 +1,18 @@
-This code is my source of the cow speak javascript interperter code golf challenge of pixelscamp quizshow qualifiers #2
+This code is my final source of the cow speak javascript interperter code golf challenge of pixelscamp quizshow qualifiers #2
 
-There are 2 branches, the master branch was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests
+There are 2 branches, the master branch was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests. The rewrite branch was the last day rewrite which was accepted and a bit golfed.
 
 Both branches are based off http://www.frank-buss.de/cow.html sourcecode
 
-The rewrite branch is a last day rewrite, i restarted from frank's source and replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away, so my main issue had been the input_char of integers and myself  corrupting working code trying to fix it to pass the tests.
+My main version went through a lot of different undocumented version, adding tests and debugging the operators to try and get it accepted by the system (it was a black box system, didn't give you any feedback on what test had failed).
 
-So i didn't end up with much time for actual golfing (you can find my submitted code on cowtest2.html on the rewrite branch).
+After swapping some tests (and input_char and output_char functions) with cer and still not being able to get my original version accepted i went for the rewrite, restarted from frank's source, just replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away. So my main issue had been the weird handling of input_char and output_char of integers, and myself corrupting working code trying to fix it to pass the tests.
+
+So i didn't end up with much time for actual golfing (you can find my submitted code on cowtest2.html on the rewrite branch). Just a couple of hours converting while's into for's, replacing all var strings with single digit, initializing vars within for loops and converting the switch statement into a working if statement.
 
 Plenty of stuff i could have tried if i had had the time. :/
 
-Some things i also learned from cer and naps62 discussing their versions (with shared source) after the challenge was done.
+Some things i learned now, after the challenge is over, from reading cer and naps62 discussing their versions on slack (with shared source).
 
 So here is a short list of todo optimizations:
 - The tokenizer loop could have been rewritten with a sliding window or regex
