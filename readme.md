@@ -67,6 +67,8 @@ c=p=>{
 }
 ``` 
 
+mluis's version: https://github.com/mluis/pixels.camp-2016/tree/master/pixel-cow-moo
+
 According to the challenge master these were the top results:
 ```
 tiago        |         426
