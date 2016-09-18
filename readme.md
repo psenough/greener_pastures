@@ -1,4 +1,5 @@
 This code is my final source of the cow speak javascript interperter code golf challenge of pixelscamp quizshow qualifiers #2
+http://quizchallenges.pixels.camp/challenge2.html
 
 There are 2 branches, the master branch was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests. The rewrite branch was the last day rewrite which was accepted and a bit golfed.
 
