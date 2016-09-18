@@ -4,7 +4,7 @@ There are 2 branches, the master branch was the version i was originally working
 
 Both branches are based off http://www.frank-buss.de/cow.html sourcecode
 
-The rewrite branch is a last day rewrite, i restarted from frank's source and replaced the input and output char and ran the tests, and it just worked straight away, so my main issue had been the input_char of integers and corrupting working code trying to fix it to pass the tests.
+The rewrite branch is a last day rewrite, i restarted from frank's source and replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away, so my main issue had been the input_char of integers and myself  corrupting working code trying to fix it to pass the tests.
 
 So i didn't end up with much time for actual golfing (you can find my submitted code on cowtest2.html on the rewrite branch).
 
