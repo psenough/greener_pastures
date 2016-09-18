@@ -16,6 +16,7 @@ So here is a short list of todo optimizations:
 - The tokenizer loop could have been rewritten with a sliding window or regex
 - The switch could have been reduced further into pure ?: statements
 - .length could be reduced by using ```x = 'length'; t[x]```
+- removed the returns
 
 For my own reference later on, here are the other guys versions:
 
