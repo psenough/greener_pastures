@@ -10,7 +10,7 @@ So i didn't end up with much time for actual golfing (you can find my submitted 
 
 Plenty of stuff i could have tried if i had had the time. :/
 
-Some things i also learned from talks of cer and naps62 discussing their versions after the challenge was done.
+Some things i also learned from cer and naps62 discussing their versions (with shared source) after the challenge was done.
 
 So here is a short list of todo optimizations:
 - The tokenizer loop could have been rewritten with a sliding window or regex
