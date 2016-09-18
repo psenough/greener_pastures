@@ -1,7 +1,7 @@
 This code is my final source of the cow speak javascript interperter code golf challenge of pixelscamp quizshow qualifiers #2
 http://quizchallenges.pixels.camp/challenge2.html
 
-There are 3 versions, ```cowtest.html``` was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests. ```cowtest_rewrite.html``` was the last day rewrite which was accepted and a bit golfed into ```cowtest_rewrite_golffed.html```
+There are 3 versions, ```cowtest.html``` was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests. ```cowtest_rewrite.html``` was the last day rewrite which was accepted and a bit golfed into ```cowtest_rewrite_golfed.html```
 
 They are all based off http://www.frank-buss.de/cow.html sourcecode
 
@@ -13,7 +13,7 @@ So i went for the rewrite, restarted from frank's source, just replaced the inpu
 
 Sadly it was already the last day of the challenge when i did the rewrite, so i didn't end up with much time for actual golfing. Just a couple of hours converting while's into for's, replacing all var strings with single char, initializing vars within for loops, converting the switch statement into a working if statement and throwing it at uglifyjs. But hey, atleast i managed to get something accepted after i had already given up!
 
-The final submitted version is on ```cowtest_rewrite_golffed.html```, or rather it's babyproofed version, with a counter to avoid infinite loops, the submitted version removed the counter and wrapped the final for loop with a ```;``` instead.
+The final submitted version is on ```cowtest_rewrite_golfed.html```, or rather it's babyproofed version, with a counter to avoid infinite loops, the submitted version removed the counter and wrapped the final for loop with a ```;``` instead.
 
 Plenty of stuff i could have tried to reduce this further if i had had the time. :/
 
