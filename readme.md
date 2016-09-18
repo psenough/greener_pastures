@@ -63,3 +63,14 @@ c=p=>{
     }
 }
 ``` 
+
+According to the challenge master these were the top results:
+tiago        |         426
+jpbarraca    |         460
+naps62       |         496
+mluis        |         542
+carlosefr    |         546
+mjamado      |         579
+JD557        |         580
+
+My submitted version had over 800 bytes, so i was nowhere near the top. But again, considering all the difficulties, i'm pretty happy to atleast have a working version. There is supposed to be a writeup by tiago about his approaches to the challenge, i'll try to remember to link to that here, when it's out.
