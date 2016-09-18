@@ -9,7 +9,7 @@ My main version went through a lot of different undocumented version, adding tes
 
 Asked mjamado for some tips and cer swapped me some additional tests (including proper input_char and output_char functions). Still wasn't able to get my "original" version accepted.
 
-So i went for the rewrite, restarted from frank's source, just replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away. So my main issue had probably been the weird handling of input_char and output_char of integers, or the tokenizer regex simplification, and ofcourse myself corrupting working code trying to fix operators to pass the tests.
+So i went for the rewrite, restarted from frank's source, just replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away. So my main issue had probably been the weird handling of input_char and output_char of integers, or the tokenizer regex simplification, and ofcourse myself corrupting working code trying to fix/golf operators to pass my tests.
 
 Sadly it was already the last day of the challenge when i did the rewrite, so i didn't end up with much time for actual golfing. Just a couple of hours converting while's into for's, replacing all var strings with single char, initializing vars within for loops, converting the switch statement into a working if statement and throwing it at uglifyjs. But hey, atleast i managed to get something accepted after i had already given up!
 
