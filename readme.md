@@ -9,11 +9,13 @@ My main version went through a lot of different undocumented version, adding tes
 
 After swapping some tests (and input_char and output_char functions) with cer and still not being able to get my original version accepted i went for the rewrite, restarted from frank's source, just replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away. So my main issue had been the weird handling of input_char and output_char of integers, and myself corrupting working code trying to fix it to pass the tests.
 
-So i didn't end up with much time for actual golfing (you can find my submitted code on cowtest2.html on the rewrite branch). Just a couple of hours converting while's into for's, replacing all var strings with single digit, initializing vars within for loops and converting the switch statement into a working if statement.
+So i didn't end up with much time for actual golfing. Just a couple of hours converting while's into for's, replacing all var strings with single digit, initializing vars within for loops and converting the switch statement into a working if statement.
+
+You can find my submitted code on cowtest2.html on the rewrite branch, it's babyproofed with a counter to avoid infinite loops, the submitted version removed the counter and wrapped the final for loop with a ```;``` instead.
 
 Plenty of stuff i could have tried if i had had the time. :/
 
-Some things i learned now, after the challenge is over, from reading cer and naps62 discussing their versions on slack (with shared source).
+Some things i only learned now, after the challenge is over, from reading cer and naps62 discussing their versions on slack (with shared source).
 
 So here is a short list of todo optimizations:
 - The tokenizer loop could have been rewritten with a sliding window or regex
