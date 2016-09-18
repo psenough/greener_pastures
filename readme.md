@@ -1,21 +1,23 @@
 This code is my final source of the cow speak javascript interperter code golf challenge of pixelscamp quizshow qualifiers #2
 http://quizchallenges.pixels.camp/challenge2.html
 
-There are 2 branches, the master branch was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests. The rewrite branch was the last day rewrite which was accepted and a bit golfed.
+There are 3 versions, cowtest.html was the version i was originally working on and never managed to get accepted despite it seemingly passing all tests. cowtest_rewrite.html was the last day rewrite which was accepted and a bit golfed into cowtest_rewrite_golffed.html
 
-Both branches are based off http://www.frank-buss.de/cow.html sourcecode
+They are all based off http://www.frank-buss.de/cow.html sourcecode
 
 My main version went through a lot of different undocumented version, adding tests and debugging the operators to try and get it accepted by the system (it was a black box system, didn't give you any feedback on what test had failed).
 
-Asked mjamado for some tips and cer swapped me some additional tests (including proper input_char and output_char functions). Still wasn't able to get my "original" version accepted, so i went for the rewrite, restarted from frank's source, just replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away. So my main issue had been the weird handling of input_char and output_char of integers, and myself corrupting working code trying to fix it to pass the tests.
+Asked mjamado for some tips and cer swapped me some additional tests (including proper input_char and output_char functions). Still wasn't able to get my "original" version accepted.
 
-So i didn't end up with much time for actual golfing. Just a couple of hours converting while's into for's, replacing all var strings with single digit, initializing vars within for loops and converting the switch statement into a working if statement. But hey, atleast i managed to get some version accepted!
+So i went for the rewrite, restarted from frank's source, just replaced the input and output char functions and ran the tests, and it just worked (and got accepted by the system) straight away. So my main issue had been the weird handling of input_char and output_char of integers, and myself corrupting working code trying to fix it to pass the tests.
 
-You can find my submitted code on cowtest2.html on the rewrite branch, it's babyproofed with a counter to avoid infinite loops, the submitted version removed the counter and wrapped the final for loop with a ```;``` instead.
+Sadly it was already the last day of the challenge when i did the rewrite, so i didn't end up with much time for actual golfing. Just a couple of hours converting while's into for's, replacing all var strings with single digit, initializing vars within for loops and converting the switch statement into a working if statement. But hey, atleast i managed to get some version accepted!
 
-Plenty of stuff i could have tried if i had had the time. :/
+The final submitted version is on ```cowtest_rewrite_golffed.html```, or rather it's babyproofed version, with a counter to avoid infinite loops, the submitted version removed the counter and wrapped the final for loop with a ```;``` instead.
 
-Some things i only learned now, after the challenge is over, from reading cer and naps62 discussing their versions on slack (with shared source).
+Plenty of stuff i could have tried to reduce this further if i had had the time. :/
+
+Some tricks and ideas i only learned about them now, after the challenge is over, from reading cer and naps62 discussing their versions on slack (with shared source).
 
 So here is a short list of todo optimizations:
 - The tokenizer loop could have been rewritten with a sliding window or regex
