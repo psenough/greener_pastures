@@ -79,4 +79,4 @@ carlosefr    |         546
 mjamado      |         579
 JD557        |         580
 ```
-My submitted version had over 800 bytes, so i was nowhere near the top. But again, considering all the difficulties, i'm pretty happy to atleast have a working version. There is supposed to be a writeup by tiago about his approaches to the challenge, i'll try to remember to link to that here, when it's out.
+My submitted version had over 800 bytes, so i was nowhere near the top. But again, considering all the difficulties, i'm pretty happy to atleast have a working version. There is a writeup by tiago about his approaches to the challenge which you can read here: https://medium.com/@tiago_oliveira/pixels-camp-quizshow-challenge-2-70585f56266#.xkseoeqly
